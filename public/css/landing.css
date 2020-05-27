@@ -1,0 +1,205 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+:root{
+    /* Theme colors */
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --midnight:#104f55;
+
+    /* Gradient Colors */
+    --sky: linear-gradient(120deg, #6ca4fd 0%,#78d3fd 100%);
+}
+
+a{
+    text-decoration:none;
+    color: var(--text-gray);
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-size: 2.3rem;
+}
+h2{
+    font-size: 1.3rem;
+}
+h3{
+    font-size: 1.3rem;
+}
+
+
+.container{
+    margin: 0 5vw;
+}
+.text-gray{
+    color: var(--text-gray);
+}
+p{
+    color: var(--text-light);
+}
+
+
+
+.nav{
+    background: white;
+    padding: 0 2rem;
+    overflow: hidden;
+    height: 0;
+    min-height: 10vh;
+    transition: height 1s ease-in-out;
+}
+
+.nav-menu{
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position:absolute;
+    top: 0;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.collapse{
+    height: 30rem;
+}
+
+.toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.3rem 10px;
+}
+
+.toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+    padding-top: 0;
+}
+
+.nav-items{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-link{
+    padding: 1.4rem 1rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+.login-btn{
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1.34rem 1rem;
+
+}
+
+.nav-link:hover{
+    background-color: var(--midnight);
+    transition: 0.6s ease-in-out;
+
+}
+.nav-link:hover a{
+    color: white;
+}
+
+
+.nav-brand > a{
+    font-size: 1.9rem;
+    padding: 0.75rem 0;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.social{
+    padding: 1.4rem 0;
+
+}
+.social  i{
+    padding: 0 0.2rem;
+    transition: 0.3s ease;
+
+}
+
+.social i:hover{
+    transform: scale(1.4);
+
+}
+
+
+.site-title {
+    background: url(/images/landing.jpg);
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.site-title h1,h3{
+    margin: 0.3rem;
+}
+
+.btn{
+    border: none;
+    border-radius: 15px;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 1.8rem;
+    background: var(--sky);
+    font-size: large;
+    color:white;
+    font-weight: bold;
+    box-shadow: 1px 5px 10px rgba(128,128,128,.5);
+    transition: 0.7s ease;
+
+    
+}
+
+.btn:hover{
+    transform: rotate(360deg);
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+/* Media Queries */
+
+@media only screen and (max-device-width:767px){
+    .nav .nav-menu , .nav-items {
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+
+}
